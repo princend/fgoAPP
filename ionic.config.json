@@ -1,0 +1,7 @@
+{
+  "name": "fgoApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
