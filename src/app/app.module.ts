@@ -12,6 +12,7 @@ import { FireCalDetailPage    } from "../pages/fire-cal-detail/fire-cal-detail";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
   ],
   providers: [
+    LocalNotifications,
     StatusBar,
     
     SplashScreen,
