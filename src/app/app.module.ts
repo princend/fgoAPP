@@ -13,7 +13,10 @@ import { FireCalDetailPage    } from "../pages/fire-cal-detail/fire-cal-detail";
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { LocalNotifications } from '@ionic-native/local-notifications';
-
+import { HTTP } from '@ionic-native/http';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 @NgModule({
   declarations: [
     MyApp,
@@ -22,11 +25,13 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
     HomePage,
     FireCalPage,
     FireCalDetailPage
-
+    
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpClientModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -41,9 +46,9 @@ import { LocalNotifications } from '@ionic-native/local-notifications';
   providers: [
     LocalNotifications,
     StatusBar,
-    
+    HTTP,
     SplashScreen,
-    
+    HttpClient,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

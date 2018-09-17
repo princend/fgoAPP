@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams,ToastController  } from 'ionic-angu
 import { AP } from "./data";
 import { LocalNotifications } from '@ionic-native/local-notifications';
 
+
 /**
  * Generated class for the ApDetailPage page.
  *
@@ -61,6 +62,7 @@ export class ApDetailPage {
     });
     toast.present();
   }
+
 
 
 }
