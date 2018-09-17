@@ -15,6 +15,7 @@ export class MyApp {
   rootPage: any = HomePage;
   fireCalPage = FireCalPage;
   apPage = ApPage
+  homePage=HomePage
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen, public menuCrtl: MenuController) {
     platform.ready().then(() => {
