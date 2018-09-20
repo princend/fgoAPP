@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
-  <title>Ionic App</title>
+  <title>FGO-tool</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="format-detection" content="telephone=no">
   <meta name="msapplication-tap-highlight" content="no">
@@ -28,8 +29,9 @@
   </script>-->
 
   <link href="build/main.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="assets/live2d/css/live2d.css" />
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
@@ -45,5 +47,29 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+
+
+
 </body>
+<footer>
+
+  <div id="landlord">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="280" height="250" class="live2d"></canvas>
+
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    var message_Path = 'assets/live2d/'
+    var home_Path = 'https://localhost:8100/'  //此处修改为你的域名，必须带斜杠
+  </script>
+  <script type="text/javascript" src="assets/live2d/js/live2d.js"></script>
+  <script type="text/javascript" src="assets/live2d/js/message.js"></script>
+  <script type="text/javascript">
+    loadlive2d("live2d", "assets/live2d/model/tia/model.json");
+  </script>
+</footer> 
+
 </html>
